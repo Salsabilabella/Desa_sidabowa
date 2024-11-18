@@ -1,0 +1,1 @@
+var json_Bank_10 = {"type":"FeatureCollection","name":"Bank_10","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"Bank BRI"},"geometry":{"type":"Point","coordinates":[109.218885884954958,-7.460046236934879]}}]}

@@ -1,0 +1,1 @@
+var json_Lapangan_11 = {"type":"FeatureCollection","name":"Lapangan_11","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"Lapangan"},"geometry":{"type":"Point","coordinates":[109.217588930856607,-7.456987641552779]}}]}

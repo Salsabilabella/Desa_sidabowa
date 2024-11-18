@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1, width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/horsey.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/ol3-search-layer.min.css">
+        <link href="resources/ol-geocoder.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        
+        <style>
+           html, body {
+    background-color: #f8f9fa; /* Latar belakang pastel */
+    font-family: 'Roboto', sans-serif; /* Ganti font untuk lebih modern */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradasi warna elegan */
+    color: white;
+    text-align: center;
+    padding: 60px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.navbar {
+    background-color: #4c4c8e; /* Warna navbar lebih gelap */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757; /* Efek hover */
+    color: #e4e4e4;
+}
+
+.description, .about {
+    background-color: #ffffff;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.description h2, .about h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.description-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+.map-container {
+    background-color: #ffffff;
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.footer {
+    background: linear-gradient(135deg, #4c4c8e, #6a11cb);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ol-control > * {
+    background-color: #fafafa !important;
+    color: #444444 !important;
+    border-radius: 4px;
+}
+
+.ol-control > :focus, .ol-control >:hover {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+        </style>
+
+        <title>Peta Desa Sidabowa</title>
+    </head>
+    <body>
+        <!-- Bagian Header -->
+        <div class="header">
+            <h1>Selamat Datang Di Desa Sidabowa </h1>
+          
+        </div>
+
+        <!-- Bagian Navbar -->
+        <div class="navbar">
+            <a href="#deskripsi">Deskripsi</a>
+            <a href="#peta">Peta</a>
+            <a href="#tentang">Tentang</a>
+        </div>
+
+        <!-- Bagian Deskripsi Kelurahan -->
+        <div class="description" id="deskripsi">
+            <h2>Deskripsi Desa Sidabowa</h2>
+            <img class="description-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEA33YBe1QH0xP392LVcJlBv0xVZULU-GxlQ5y_aGTgCUk_GIR69W-Lkq0kIS4LExIjYjD1JNIxD6k4UHJK5nkW1myADT4FiHPR3TibEaXmd6I_aBvGeC7WwK2yvoWLEKMIiPbl0xQASXYNjBqnPUgTyRR613wQfwxutAHeq757jDQByLu__Q51y8k/s1600/20220827_130250850-compress1.jpg" alt="Gambar Kantor Kelurahan">
+            <p>Desa Sidabowa, yang terletak di Kecamatan Patikraja, Kabupaten Banyumas, merupakan desa yang kaya akan potensi alam dan budaya lokal. Desa ini memiliki suasana pedesaan yang khas, dikelilingi oleh hamparan sawah hijau dan lingkungan yang asri. Dengan lokasinya yang strategis, Desa Sidabowa menjadi penghubung antara wilayah pedesaan dan pusat Kecamatan Patikraja, memudahkan akses ke fasilitas umum dan layanan masyarakat.</p>
+            <p>Desa Sidabowa terkenal dengan masyarakatnya yang ramah dan gotong-royong, mempertahankan nilai-nilai tradisional yang diwariskan secara turun-temurun. Selain itu, desa ini juga memiliki beberapa fasilitas publik seperti sekolah, tempat ibadah, dan pasar tradisional, yang mendukung kehidupan sehari-hari penduduk. Lingkungan yang masih alami di desa ini memberikan peluang besar dalam sektor pertanian, yang menjadi sumber penghidupan utama sebagian besar warganya.</p>
+            <p>Desa Sidabowa tidak hanya berkembang di sektor agraris, tetapi juga mulai menunjukkan kemajuan di bidang ekonomi kreatif, dengan banyaknya usaha kecil menengah (UMKM) yang bergerak di bidang kerajinan, makanan khas, dan jasa. Pemerintah desa bersama masyarakat aktif mengembangkan potensi ini untuk menarik perhatian wisatawan lokal maupun pendatang, menjadikan Desa Sidabowa sebagai salah satu desa yang berdaya saing di Kabupaten Banyumas.</p>
+        </div>
+       
+            <h2>Peta Interaktif Desa Sidabowa</h2>
+    
+
+        <!-- Bagian Peta Interaktif dalam Box -->
+        <div class="map-container" id="peta">
+            <div id="map">
+                <div id="popup" class="ol-popup">
+                    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                    <div id="popup-content"></div>
+                </div>
+            </div>
+        </div>
+
+           <!-- Bagian Tentang Peta -->
+           <div class="about" id="tentang">
+            <h2>Tentang Peta Interaktif Desa Sidabowa</h2>
+            <p>Peta interaktif Desa Sidabowa dirancang sebagai alat navigasi yang modern dan informatif, memudahkan pengguna dalam menjelajahi wilayah ini secara visual. Dengan antarmuka yang intuitif, peta ini memungkinkan pengguna untuk melakukan zoom, menggeser peta, dan mengeksplorasi detail wilayah dengan mudah. Berbagai fitur utama disematkan, seperti penandaan batas wilayah administratif, lokasi fasilitas umum, jaringan jalan, sungai, serta area pertanian dan perkebunan, menjadikan peta ini sebagai panduan komprehensif untuk memahami potensi geografis dan infrastruktur desa.
+                Setiap elemen pada peta, seperti sekolah, masjid, pasar, dan fasilitas kesehatan, dilengkapi dengan ikon interaktif yang dapat diklik untuk menampilkan informasi detail, seperti nama lokasi dan deskripsi singkat. Selain itu, peta ini memiliki fitur layer switcher, memungkinkan pengguna untuk menyesuaikan tampilan sesuai kebutuhan, seperti menampilkan hanya jalur transportasi atau area hijau.
+                Fitur pencarian yang tersedia juga mempermudah pengguna menemukan lokasi spesifik dengan cepat. Didukung desain minimalis dengan warna-warna netral, peta ini dirancang agar tidak membingungkan pengguna dan tetap terlihat estetis, baik di perangkat desktop maupun mobile.  
+                Sebagai bagian dari upaya digitalisasi desa, peta interaktif Desa Sidabowa juga berfungsi sebagai media promosi dan edukasi, menampilkan informasi tentang potensi wilayah seperti pusat UMKM, lokasi industri kecil, serta area wisata lokal. Dengan adanya peta ini, diharapkan dapat membantu pemerintah desa, warga, dan calon investor dalam memahami serta memanfaatkan potensi Desa Sidabowa untuk pembangunan yang berkelanjutan.</p>
+        </div>
+
+        <!-- Footer Dibuat oleh -->
+        <div class="footer">
+            <p> © 2024 || Peta Desa Sidabowa || Dibuat oleh: Futikhat Salsabila</p>
+        </div>
+
+
+<script src="resources/qgis2web_expressions.js"></script>
+<script src="resources/proj4.js"></script>
+<script>proj4.defs('EPSG:4326','+proj=longlat +datum=WGS84 +no_defs');</script>
+<script src="./resources/functions.js"></script>
+<script src="./resources/ol.js"></script>
+<script src="./resources/ol-layerswitcher.js"></script>
+<script src="resources/ol-geocoder.js"></script>
+<script src="layers/ADMINISTRASIDESA_AR_25K_1.js"></script><script src="layers/BatasRT_2.js"></script><script src="layers/Sawah_3.js"></script><script src="layers/Sungai_4.js"></script><script src="layers/BatasDesaRW_5.js"></script><script src="layers/jalandesa_6.js"></script><script src="layers/BangunanSdbw_Poly_7.js"></script><script src="layers/Apotek_8.js"></script><script src="layers/Pemerintahan_sidabowa_9.js"></script><script src="layers/Bank_10.js"></script><script src="layers/Lapangan_11.js"></script><script src="layers/Gereja_12.js"></script><script src="layers/PDAM_13.js"></script><script src="layers/TPU_14.js"></script><script src="layers/Sekolah_15.js"></script><script src="layers/Masjid_16.js"></script><script src="layers/Mushola_17.js"></script><script src="layers/TempatMakan_18.js"></script><script src="layers/rumahku_19.js"></script><script src="layers/Store_20.js"></script>
+<script src="styles/ADMINISTRASIDESA_AR_25K_1_style.js"></script><script src="styles/BatasRT_2_style.js"></script><script src="styles/Sawah_3_style.js"></script><script src="styles/Sungai_4_style.js"></script><script src="styles/BatasDesaRW_5_style.js"></script><script src="styles/jalandesa_6_style.js"></script><script src="styles/BangunanSdbw_Poly_7_style.js"></script><script src="styles/Apotek_8_style.js"></script><script src="styles/Pemerintahan_sidabowa_9_style.js"></script><script src="styles/Bank_10_style.js"></script><script src="styles/Lapangan_11_style.js"></script><script src="styles/Gereja_12_style.js"></script><script src="styles/PDAM_13_style.js"></script><script src="styles/TPU_14_style.js"></script><script src="styles/Sekolah_15_style.js"></script><script src="styles/Masjid_16_style.js"></script><script src="styles/Mushola_17_style.js"></script><script src="styles/TempatMakan_18_style.js"></script><script src="styles/rumahku_19_style.js"></script><script src="styles/Store_20_style.js"></script>
+<script src="./layers/layers.js" type="text/javascript"></script> 
+<script src="./resources/Autolinker.min.js"></script>
+<script src="./resources/qgis2web.js"></script>
+</body>
+</html>    

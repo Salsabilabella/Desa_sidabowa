@@ -1,0 +1,1 @@
+var json_rumahku_19 = {"type":"FeatureCollection","name":"rumahku_19","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"Rumah Futikhat Salsabila"},"geometry":{"type":"Point","coordinates":[109.21981233390143,-7.46046632495274]}}]}
