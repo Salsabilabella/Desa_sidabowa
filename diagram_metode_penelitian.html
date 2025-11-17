@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagram Alur Metode Penelitian - AI Agent Chatbot</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .diagram-section {
+            margin-bottom: 50px;
+        }
+        
+        .diagram-section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .diagram-container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .mermaid {
+            text-align: center;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .info-box h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Diagram Alur Metode Penelitian</h1>
+            <p>Implementasi AI Agent Chatbot untuk Meningkatkan Efektivitas Layanan</p>
+            <p>Toko Citra Karya Gemilang</p>
+        </div>
+        
+        <div class="content">
+            <!-- Diagram 1: Alur Metode Penelitian Keseluruhan -->
+            <div class="diagram-section">
+                <h2>1. Alur Metode Penelitian Keseluruhan</h2>
+                <div class="diagram-container">
+                    <div class="mermaid">
+                        flowchart TD
+                            Start([Mulai Penelitian]) --> A[Identifikasi Masalah]
+                            A --> B[Studi Literatur]
+                            B --> C[Pengumpulan Data]
+                            C --> D{Metode Pengumpulan Data}
+                            D --> E[Observasi Langsung]
+                            D --> F[Wawancara Semi-Terstruktur]
+                            D --> G[Studi Dokumentasi]
+                            E --> H[Analisis Kebutuhan Sistem]
+                            F --> H
+                            G --> H
+                            H --> I[Perancangan Sistem]
+                            I --> J[Desain Arsitektur Chatbot]
+                            J --> K[Implementasi Sistem]
+                            K --> L[Integrasi WAHA + n8n + Gemini AI]
+                            L --> M[Pengujian Sistem]
+                            M --> N{Sistem Berfungsi?}
+                            N -->|Tidak| K
+                            N -->|Ya| O[Evaluasi Hasil]
+                            O --> P[Dokumentasi]
+                            P --> End([Selesai])
+                            
+                            style Start fill:#4CAF50,stroke:#2E7D32,color:#fff
+                            style End fill:#4CAF50,stroke:#2E7D32,color:#fff
+                            style H fill:#FF9800,stroke:#F57C00,color:#fff
+                            style I fill:#2196F3,stroke:#1565C0,color:#fff
+                            style K fill:#9C27B0,stroke:#6A1B9A,color:#fff
+                            style M fill:#F44336,stroke:#C62828,color:#fff
+                            style N fill:#FFC107,stroke:#F57F17,color:#000
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Penjelasan Tahapan:</h3>
+                    <ul>
+                        <li><strong>Identifikasi Masalah:</strong> Mengidentifikasi kendala komunikasi manual di Toko Citra Karya Gemilang</li>
+                        <li><strong>Studi Literatur:</strong> Mengkaji teori chatbot AI, NLP, dan WhatsApp API</li>
+                        <li><strong>Pengumpulan Data:</strong> Observasi, wawancara, dan dokumentasi</li>
+                        <li><strong>Analisis Kebutuhan:</strong> Menentukan fitur dan spesifikasi sistem</li>
+                        <li><strong>Perancangan:</strong> Membuat desain arsitektur dan workflow</li>
+                        <li><strong>Implementasi:</strong> Membangun sistem chatbot</li>
+                        <li><strong>Pengujian:</strong> Validasi fungsi dan performa sistem</li>
+                        <li><strong>Evaluasi:</strong> Mengukur efektivitas sistem</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Diagram 2: Metode Pengumpulan Data -->
+            <div class="diagram-section">
+                <h2>2. Detail Metode Pengumpulan Data</h2>
+                <div class="diagram-container">
+                    <div class="mermaid">
+                        flowchart LR
+                            A[Pengumpulan Data] --> B[Observasi Langsung]
+                            A --> C[Wawancara]
+                            A --> D[Studi Literatur]
+                            
+                            B --> B1[Mengamati Alur Komunikasi]
+                            B --> B2[Pola Pertanyaan Pelanggan]
+                            B --> B3[Kendala Komunikasi Manual]
+                            
+                            C --> C1[Wawancara Pemilik Toko]
+                            C --> C2[Wawancara Teknisi]
+                            C --> C3[Identifikasi Kebutuhan Sistem]
+                            
+                            D --> D1[Jurnal Ilmiah]
+                            D --> D2[Dokumentasi Teknis]
+                            D --> D3[Penelitian Terdahulu]
+                            
+                            B1 --> E[Data Terintegrasi]
+                            B2 --> E
+                            B3 --> E
+                            C1 --> E
+                            C2 --> E
+                            C3 --> E
+                            D1 --> E
+                            D2 --> E
+                            D3 --> E
+                            
+                            style A fill:#667eea,stroke:#764ba2,color:#fff
+                            style E fill:#4CAF50,stroke:#2E7D32,color:#fff
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Diagram 3: Metode Pengembangan Sistem (SDLC) -->
+            <div class="diagram-section">
+                <h2>3. Metode Pengembangan Sistem (SDLC - Waterfall)</h2>
+                <div class="diagram-container">
+                    <div class="mermaid">
+                        flowchart TD
+                            A[1. ANALISIS KEBUTUHAN] --> A1[Identifikasi Fitur Chatbot]
+                            A1 --> A2[Analisis Proses Bisnis Toko]
+                            A2 --> A3[Spesifikasi Kebutuhan Fungsional]
+                            
+                            A3 --> B[2. PERANCANGAN SISTEM]
+                            B --> B1[Desain Arsitektur Sistem]
+                            B1 --> B2[Perancangan Workflow n8n]
+                            B2 --> B3[Desain Integrasi WAHA + Gemini AI]
+                            B3 --> B4[Perancangan Database/Google Sheets]
+                            
+                            B4 --> C[3. IMPLEMENTASI]
+                            C --> C1[Setup WAHA WhatsApp API]
+                            C1 --> C2[Konfigurasi n8n Workflow]
+                            C2 --> C3[Integrasi Gemini AI]
+                            C3 --> C4[Koneksi ke Data Sparepart]
+                            C4 --> C5[Deploy ke Server Hosting]
+                            
+                            C5 --> D[4. PENGUJIAN]
+                            D --> D1[Pengujian Fungsional]
+                            D1 --> D2[Pengujian Respons AI]
+                            D2 --> D3[Pengujian Integrasi WhatsApp]
+                            D3 --> D4[Pengujian User Acceptance]
+                            
+                            D4 --> E{Hasil Pengujian}
+                            E -->|Gagal| C
+                            E -->|Berhasil| F[5. EVALUASI & DOKUMENTASI]
+                            F --> G[Sistem Siap Digunakan]
+                            
+                            style A fill:#2196F3,stroke:#1565C0,color:#fff
+                            style B fill:#9C27B0,stroke:#6A1B9A,color:#fff
+                            style C fill:#FF9800,stroke:#F57C00,color:#fff
+                            style D fill:#F44336,stroke:#C62828,color:#fff
+                            style F fill:#4CAF50,stroke:#2E7D32,color:#fff
+                            style G fill:#4CAF50,stroke:#2E7D32,color:#fff
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Metode SDLC (Software Development Life Cycle) - Model Waterfall</h3>
+                    <ul>
+                        <li><strong>Karakteristik:</strong> Pendekatan sekuensial dan terstruktur</li>
+                        <li><strong>Tahapan:</strong> Analisis → Perancangan → Implementasi → Pengujian → Evaluasi</li>
+                        <li><strong>Kelebihan:</strong> Sistematis, mudah dipahami, dokumentasi lengkap</li>
+                        <li><strong>Cocok untuk:</strong> Proyek dengan kebutuhan yang jelas dan stabil</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Diagram 4: Arsitektur Sistem Chatbot -->
+            <div class="diagram-section">
+                <h2>4. Arsitektur Sistem AI Agent Chatbot</h2>
+                <div class="diagram-container">
+                    <div class="mermaid">
+                        flowchart TB
+                            User[👤 Pelanggan] -->|Kirim Pesan| WA[📱 WhatsApp]
+                            WA -->|API Request| WAHA[🔌 WAHA<br/>WhatsApp API Gateway]
+                            WAHA -->|Webhook| N8N[⚙️ n8n Workflow<br/>Automation]
+                            
+                            N8N -->|Process Message| AI[🤖 Gemini AI<br/>Natural Language Processing]
+                            AI -->|Understand Intent| N8N
+                            
+                            N8N -->|Query Data| DB[(📊 Google Sheets<br/>Data Sparepart & Harga)]
+                            DB -->|Return Data| N8N
+                            
+                            N8N -->|Generate Response| AI
+                            AI -->|AI Response| N8N
+                            
+                            N8N -->|Send Reply| WAHA
+                            WAHA -->|API Response| WA
+                            WA -->|Terima Balasan| User
+                            
+                            style User fill:#4CAF50,stroke:#2E7D32,color:#fff
+                            style WA fill:#25D366,stroke:#128C7E,color:#fff
+                            style WAHA fill:#2196F3,stroke:#1565C0,color:#fff
+                            style N8N fill:#FF6D00,stroke:#E65100,color:#fff
+                            style AI fill:#9C27B0,stroke:#6A1B9A,color:#fff
+                            style DB fill:#FF9800,stroke:#F57C00,color:#fff
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Komponen Sistem:</h3>
+                    <ul>
+                        <li><strong>WhatsApp:</strong> Platform komunikasi dengan pelanggan</li>
+                        <li><strong>WAHA:</strong> Gateway untuk menghubungkan WhatsApp dengan sistem backend</li>
+                        <li><strong>n8n:</strong> Workflow automation untuk mengatur alur logika chatbot</li>
+                        <li><strong>Gemini AI:</strong> Model AI dengan kemampuan NLP bawaan untuk memahami dan merespons pesan</li>
+                        <li><strong>Google Sheets:</strong> Database untuk menyimpan data sparepart, harga, dan informasi toko</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Diagram 5: Alur Interaksi Chatbot -->
+            <div class="diagram-section">
+                <h2>5. Alur Interaksi Chatbot dengan Pelanggan</h2>
+                <div class="diagram-container">
+                    <div class="mermaid">
+                        flowchart TD
+                            Start([Pelanggan Kirim Pesan]) --> A{Jenis Pertanyaan}
+                            
+                            A -->|Info Sparepart| B[Cek Stok di Database]
+                            B --> B1{Stok Tersedia?}
+                            B1 -->|Ya| B2[Kirim Info Harga & Stok]
+                            B1 -->|Tidak| B3[Kirim Info Stok Kosong]
+                            
+                            A -->|Konsultasi Kerusakan HP| C[Analisis Gejala dengan AI]
+                            C --> C1[Identifikasi Masalah]
+                            C1 --> C2[Berikan Saran Perbaikan]
+                            
+                            A -->|Pertanyaan Umum| D[Proses dengan Gemini AI]
+                            D --> D1[Generate Respons Natural]
+                            
+                            A -->|Lokasi & Jam Operasional| E[Kirim Info Toko]
+                            
+                            B2 --> F[Kirim Balasan ke Pelanggan]
+                            B3 --> F
+                            C2 --> F
+                            D1 --> F
+                            E --> F
+                            
+                            F --> G{Pelanggan Puas?}
+                            G -->|Tidak| H[Tawarkan Bantuan Lanjutan]
+                            H --> Start
+                            G -->|Ya| End([Selesai])
+                            
+                            style Start fill:#4CAF50,stroke:#2E7D32,color:#fff
+                            style End fill:#4CAF50,stroke:#2E7D32,color:#fff
+                            style A fill:#FFC107,stroke:#F57F17,color:#000
+                            style F fill:#2196F3,stroke:#1565C0,color:#fff
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <p><strong>Skripsi:</strong> Implementasi AI Agent Chatbot untuk Meningkatkan Efektivitas Layanan pada Toko Sparepart dan Servis HP Citra Karya Gemilang</p>
+            <p><strong>Metode:</strong> SDLC (Software Development Life Cycle) - Model Waterfall</p>
+            <p>© 2025 - Universitas Amikom Yogyakarta</p>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>
